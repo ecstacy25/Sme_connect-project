@@ -13,5 +13,6 @@ build/
 
 # Ignore cache files
 *.log
-
+# Ignore config files
 configs/
+
