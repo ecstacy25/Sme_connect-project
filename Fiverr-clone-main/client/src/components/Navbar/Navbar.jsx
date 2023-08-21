@@ -51,7 +51,7 @@ const Navbar = () => {
       toast.success("Logout Successfully", {
         position: "bottom-right",
         toastId: 1,
-        autoClose: 1000,
+        autoClose: 3000,
       });
       navigate("/");
     } catch (error) {

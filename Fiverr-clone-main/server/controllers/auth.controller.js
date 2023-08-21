@@ -38,7 +38,8 @@ export const login = async (req, res, next) => {
     );
 
     const { password, ...info } = user._doc;
-    res
+   const loginResponse = res
+   
       .cookie("accessToken", token, {
         httpOnly: true,
         sameSite: "none",
@@ -46,6 +47,7 @@ export const login = async (req, res, next) => {
       })
       .status(200)
       .send(info);
+      console.log(loginResponse, 'login');
   } catch (error) {
     next(error);
   }

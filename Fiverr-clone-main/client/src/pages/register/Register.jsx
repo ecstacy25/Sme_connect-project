@@ -55,7 +55,7 @@ const Register = () => {
         });
       }
     }
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 3000));
     actions.resetForm();
   };
 
@@ -178,7 +178,7 @@ const Register = () => {
                   ) : (
                     <>
                       <p>Upload Cover Image</p>
-                      <BsUpload size={20} />
+                      <BsUpload size={50} />
                       <label
                         htmlFor="img"
                         className="w-fit border py-2 px-5 rounded-md cursor-pointer"

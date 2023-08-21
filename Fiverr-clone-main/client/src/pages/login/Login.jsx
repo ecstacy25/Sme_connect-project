@@ -34,6 +34,7 @@ const Login = ({ show, setShow }) => {
     setLoading(true);
     try {
       const res = await Axios.post(requests.login, payload);
+      console.log('loginResponse', res);
       setAuthUser(res.data);
       localStorage.setItem("currentUser", JSON.stringify(res.data));
       toast.success("Login Successfully", {
@@ -59,7 +60,7 @@ const Login = ({ show, setShow }) => {
         });
       }
     }
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 3000));
     actions.resetForm();
   };
 

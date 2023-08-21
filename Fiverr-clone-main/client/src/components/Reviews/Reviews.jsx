@@ -42,7 +42,7 @@ const Reviews = ({ gigId }) => {
       });
       setLoading(false);
       refetch();
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await new Promise((resolve) => setTimeout(resolve, 3000));
       actions.resetForm();
       return res.data;
     } catch (error) {
