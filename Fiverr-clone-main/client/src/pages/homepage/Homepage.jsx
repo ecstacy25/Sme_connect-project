@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import Clients from "../../components/HomeComponents/Clients/Clients";
 import Hero from "../../components/HomeComponents/Hero/Hero";
-import Slides from "../../components/Slides/Slides";
+// import Slides from "../../components/Slides/Slides";
 import SingleCard from "../../components/HomeComponents/Services/SingleCard/SingleCard";
 import Features from "../../components/HomeComponents/Features/Features";
 import { cards, projectsCards, testimonyData } from "../../data/data";
-import Marketplace from "../../components/HomeComponents/Marketplace/Marketplace";
+// import Marketplace from "../../components/HomeComponents/Marketplace/Marketplace";
 import Business from "../../components/HomeComponents/Business/Business";
 import Testimony from "../../components/HomeComponents/Testimony/Testimony";
 import Projects from "../../components/HomeComponents/Projects/Projects";
@@ -23,8 +23,8 @@ const Homepage = () => {
   return (
     <main>
       <Hero />
-      <Clients />
-      {isLoading ? (
+      {/* <Clients /> */}
+      {/* {isLoading ? (
         <div className="flex items-center justify-center w-full">
           <img src={loader} alt="/" className="w-[40px]" />
         </div>
@@ -59,9 +59,9 @@ const Homepage = () => {
         </>
       )}
       <Features />
-      <Marketplace />
+      {/* <Marketplace /> */}
       <Business />
-      <Slides rowId="2" distance={1200}>
+      {/* <Slides rowId="2" distance={1200}>
         {testimonyData.map((item, i) => (
           <Testimony item={item} key={i} />
         ))}
@@ -74,7 +74,7 @@ const Homepage = () => {
         {projectsCards.map((item, i) => (
           <Projects item={item} key={i} />
         ))}
-      </Slides>
+      </Slides> */}
     </main>
   );
 };

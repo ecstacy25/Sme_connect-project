@@ -97,7 +97,7 @@ const Register = () => {
           >
             <div className="flex items-start justify-start flex-col gap-4 w-full sm:flex-1">
               <h1 className="text-2xl text-darkColor font-semibold">
-                Create an Account
+                Create a Service seeker Account
               </h1>
               <CustomizeInput
                 showLabel={false}
@@ -221,12 +221,12 @@ const Register = () => {
             </div>
             <div className="flex items-start justify-start flex-col gap-4 w-full sm:flex-1">
               <h1 className="text-2xl text-darkColor font-semibold">
-                I want to be a seller
+                I want to be a Service Provider
               </h1>
               <div className="w-full mt-8">
                 <label className="flex items-center justify-start w-full relative gap-4">
                   <span className="text-[#5D6771] text-[15px] leading-5 font-medium flex items-center justify-center select-none">
-                    Activate the seller account
+                    Activate the Professional account
                   </span>
                   <span className="flex items-center justify-center select-none action">
                     <input

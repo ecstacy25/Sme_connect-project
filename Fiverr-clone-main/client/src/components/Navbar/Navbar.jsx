@@ -86,7 +86,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`flex items-center justify-center w-full flex-col text-white fixed top-0 transition-all ease-in-out z-20 ${
+      className={`flex items-center justify-center w-full flex-col text-cyan-750 fixed top-0 transition-all ease-in-out z-20 ${
         active || pathname !== "/" ? "bg-white !text-darkColor" : ""
       }`}
     >
@@ -105,13 +105,13 @@ const Navbar = () => {
               to="/"
               className="text-4xl select-none font-black tracking-tighter"
             >
-              <span>fiverr</span>
+              <span>SME Connect</span>
               <span className="text-primary">.</span>
             </Link>
           </div>
           <nav className="flex items-center justify-end gap-7 font-medium text-base">
             <Link to="/" className="cursor-pointer hidden lg:flex">
-              Fiverr Business
+              SME Connect Business
             </Link>
             <div className="cursor-pointer hidden lg:flex">Explore</div>
             <div className="items-center gap-2 cursor-pointer hidden lg:flex">
@@ -124,7 +124,7 @@ const Navbar = () => {
               <span>
                 <BsCurrencyDollar />
               </span>
-              USD
+              NGN
             </span>
             {!authUser?.isSeller && (
               <p className="cursor-pointer hidden lg:flex">Become a Seller</p>
@@ -193,13 +193,15 @@ const Navbar = () => {
                     navigate("/");
                     setLoginModal(true);
                   }}
-                  className="cursor-pointer hidden sm:flex"
+                  className={`border-cyan-700 border py-2 px-5 rounded hover:bg-primary hover:border-primary hover:text-white transition-all duration-300 text-sm font-semibold ${
+                    active ? "text-primary border-primary" : ""
+                  }`}
                 >
                   Sign in
                 </div>
                 <NavLink
                   to="/join"
-                  className={`border py-2 px-5 rounded hover:bg-primary hover:border-primary hover:text-white transition-all duration-300 text-sm font-semibold ${
+                  className={` border-cyan-700 border py-2 px-5 rounded hover:bg-primary hover:border-primary hover:text-white transition-all duration-300 text-sm font-semibold ${
                     active ? "text-primary border-primary" : ""
                   }`}
                 >

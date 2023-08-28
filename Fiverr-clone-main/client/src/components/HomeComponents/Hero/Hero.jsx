@@ -4,12 +4,12 @@ import { buttons } from "../../../data/data";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
-import image1 from "../../../assets/images/hero1.png";
-import image2 from "../../../assets/images/hero2.png";
-import image3 from "../../../assets/images/hero3.png";
-import image4 from "../../../assets/images/hero4.png";
-import image5 from "../../../assets/images/hero5.png";
-import image6 from "../../../assets/images/hero6.png";
+import image1 from "../../../assets/images/hero1.jpg";
+import image2 from "../../../assets/images/hero2.jpg";
+import image3 from "../../../assets/images/hero3.jpg";
+import image4 from "../../../assets/images/hero4.jpg";
+import image5 from "../../../assets/images/hero5.jpg";
+import image6 from "../../../assets/images/hero6.jpg";
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -57,19 +57,19 @@ const Hero = () => {
   }, [currentImageIndex]);
 
   return (
-    <section className='w-full bg-[#1a1b1d] h-screen lg:h-[120vh] text-white  pt-20 relative'>
+    <section className='w-full bg-[#1a1b1d] h-screen lg:h-[120vh] text-cyan-750  pt-20 relative'>
       <div className='contain flex flex-col items-start justify-center h-full relative z-10'>
         <div className='flex flex-col items-start justify-start gap-5 w-full'>
           <h2 className='text-2xl sm:text-4xl lg:text-5xl font-semibold leading-[120%]'>
-            Find the perfect <i className='font-light'>freelance</i> <br />{" "}
-            services for your business
+            SME Connect: Your <i className='font-light'>gateway</i> to business success<br />{" "}
+            
           </h2>
           <div
             className={`flex flex-col lg:flex-row items-center w-full gap-5 lg:w-[650px] bg-white h-[50px] rounded-md focus:border focus:border-primary relative mb-20 lg:mb-0`}
           >
             <div className='flex items-center justify-start gap-2 w-full h-full'>
               <span
-                className={`text-active pl-3 ${
+                className={`text-active pl-3 #{
                   errors.input && touched.input
                     ? " placeholder:text-red-500"
                     : ""

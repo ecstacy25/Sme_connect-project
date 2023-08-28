@@ -1,7 +1,7 @@
 import React from "react";
 import { BsCheckCircle } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import userImg from "../../../assets/images/businessImg.png";
+import userImg from "../../../assets/images/businessImg.jpg";
 import { businessData } from "../../../data/data";
 
 const Business = () => {
@@ -11,16 +11,15 @@ const Business = () => {
         <div className="flex lg:items-center items-start justify-start flex-col lg:flex-row lg:justify-between w-full gap-8 lg:gap-5">
           <div className="flex-1 flex items-start justify-start flex-col gap-5">
             <h4 className="text-lg md:text-3xl font-bold">
-              <span>fiverr</span>
+              <span>SME Connect</span>
               <span className="font-normal"> business.</span>
             </h4>
             <h2 className="text-xl md:text-4xl font-bold">
-              A business solution <br /> designed for{" "}
-              <i className="font-light">teams</i>
+              Taliored solutions <br /> for SME{" "}
+              <i className="font-light">businesses</i>
             </h2>
             <p className="w-full lg:max-w-[450px] text-base font-medium">
-              Upgrade to a curated experience packed with tools and benefits,
-              dedicated to businesses
+            Elevate your experience to an exclusive suite of tools and advantages, meticulously crafted for businesses.
             </p>
             <div className="w-full flex items-start justify-start flex-col gap-2">
               {businessData.map((item, i) => (
@@ -43,7 +42,7 @@ const Business = () => {
               to="/"
               className="w-fit bg-primary py-2 px-5 text-base font-semibold rounded mt-8 transition-all hover:bg-primary/75"
             >
-              Explore Fiverr Business
+              Explore SME Connect Business
             </Link>
           </div>
           <div className="flex-1">

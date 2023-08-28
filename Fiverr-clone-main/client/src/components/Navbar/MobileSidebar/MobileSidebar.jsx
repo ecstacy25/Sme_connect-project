@@ -59,7 +59,7 @@ const MobileSidebar = ({ show, setShow, setLoginModal }) => {
             to="/join"
             className={`border py-3 px-6 rounded bg-primary border-primary text-white transition-all duration-300 text-base font-semibold`}
           >
-            Join Fiverr
+            Join SME Connect
           </NavLink>
           <div
             onClick={() => {
@@ -79,7 +79,7 @@ const MobileSidebar = ({ show, setShow, setLoginModal }) => {
           Explore
         </p>
         <NavLink to="/" className={`text-base font-semibold text-gray-400`}>
-          Fiverr Business
+          SME Connect Business
         </NavLink>
         <div className="mt-5 border-t w-full flex items-start justify-start flex-col gap-4 pt-3">
           <p className="cursor-pointer text-gray-400 text-base font-medium">
@@ -95,7 +95,7 @@ const MobileSidebar = ({ show, setShow, setLoginModal }) => {
             <span>
               <BsCurrencyDollar />
             </span>
-            USD
+            NGN
           </p>
         </div>
       </motion.div>

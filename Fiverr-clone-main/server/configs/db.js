@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
 
 const connect = () => {
-    return mongoose.connect('mongodb+srv://aruaecstacy:beloved.25@cluster1.aptjs0n.mongodb.net/aruaecstacy');
+    return mongoose.connect('mongodb+srv://sundayarua10:smeconnect@smeconnect.opwfzyx.mongodb.net/sundayarua10');
 };
 
 module.exports = connect;

@@ -1,4 +1,4 @@
-import image from "../assets/images/image.png";
+import image from "../assets/images/image.jpg";
 import image2 from "../assets/images/slide2.png";
 import image3 from "../assets/images/slide3.png";
 import image4 from "../assets/images/slide4.png";
@@ -270,24 +270,29 @@ export const gigCards = [
 
 export const featureData = [
   {
-    title: "The best for every budget",
+    title: "Empowering SMEs with Expert Solutions",
     detail:
-      "Find high-quality services at every price point. No hourly rates, just project-based pricing.",
+      "Explore a universe of expert solutions uniquely designed for small and medium-sized enterprises. We're your gateway to specialized services that fuel your growth.",
   },
   {
-    title: "Quality work done quickly",
+    title: "Solutions Aligned with Your Budget",
     detail:
-      "Find the right freelancer to begin working on your project within minutes.",
+      "Discover top-tier solutions that fit your budget perfectly. No matter your size, find quality services crafted to meet your financial goals.",
   },
   {
-    title: "Protected payments, every time",
+    title: "Efficiency Without Compromise",
     detail:
-      "Always know what you'll pay upfront. Your payment isn't released until you approve the work.",
+      "Embrace efficiency without compromising quality. Find professionals who deliver results swiftly while maintaining the high standards your enterprise deserves.",
   },
   {
-    title: "24/7 support",
+    title: "Confident Transactions, Guaranteed Satisfaction",
     detail:
-      "Questions? Our round-the-clock support team is available to help anytime, anywhere.",
+      "Your peace of mind is paramount. We ensure secure transactions and release payments only when you're content with the outcome.",
+  },
+  {
+    title: "Uninterrupted Support, Partnering with You",
+    detail:
+      "Your success is our priority. Our 24/7 support team is here to address your queries, ensuring smooth operations around the clock",
   },
 ];
 export const marketsData = [
@@ -344,19 +349,19 @@ export const marketsData = [
 ];
 export const businessData = [
   {
-    title: "Connect to freelancers with proven business experience",
+    title: "Discover skilled professionals with SME expertise",
   },
   {
-    title: "Get matched with the perfect talent by a customer success manager",
+    title: "Find your ideal match guided by a dedicated customer success manager",
   },
   {
-    title: "Manage teamwork and boost productivity with one powerful workspace",
+    title: "Enhance collaboration and amplify efficiency through a unified workspace",
   },
 ];
 
 export const testimonyData = [
   {
-    title: "Tim and Dan Joo, Co-Founder",
+    // title: "Tim and Dan Joo, Co-Founder",
     details: `"When you want to create a business bigger than yourself, you need a lot of help. That's what Fiverr does."`,
   },
   {
@@ -369,208 +374,208 @@ export const testimonyData = [
   },
 ];
 export const footerLinks = [
-  {
-    id: "cat",
-    title: "Categories",
-    links: [
-      {
-        to: "/",
-        text: "Graphics & Design",
-      },
-      {
-        to: "/",
-        text: "Digital Marketing",
-      },
-      {
-        to: "/",
-        text: "Writing & Translation",
-      },
-      {
-        to: "/",
-        text: "Video & Animation",
-      },
-      {
-        to: "/",
-        text: "Music & Audio",
-      },
-      {
-        to: "/",
-        text: "Programming & Tech",
-      },
-      {
-        to: "/",
-        text: "Data",
-      },
-      {
-        to: "/",
-        text: "Business",
-      },
-      {
-        to: "/",
-        text: "Lifestyle",
-      },
-      {
-        to: "/",
-        text: "Photography",
-      },
-      {
-        to: "/",
-        text: "Sitemap",
-      },
-    ],
-  },
-  {
-    id: "abt",
-    title: "About",
-    links: [
-      {
-        to: "/",
-        text: "Careers",
-      },
-      {
-        to: "/",
-        text: "Press & News",
-      },
-      {
-        to: "/",
-        text: "Partnerships",
-      },
-      {
-        to: "/",
-        text: "Privacy Policy",
-      },
-      {
-        to: "/",
-        text: "Terms of Service",
-      },
-      {
-        to: "/",
-        text: "Intellectual Property Claims",
-      },
-      {
-        to: "/",
-        text: "Investor Relations",
-      },
-    ],
-  },
-  {
-    id: "sup",
-    title: "Support",
-    links: [
-      {
-        to: "/",
-        text: "Help & Support",
-      },
-      {
-        to: "/",
-        text: "Trust & Safety",
-      },
-      {
-        to: "/",
-        text: "Selling on Fiverr",
-      },
-      {
-        to: "/",
-        text: "Buying on Fiverr",
-      },
-    ],
-  },
-  {
-    id: "com",
-    title: "Community",
-    links: [
-      {
-        to: "/",
-        text: "Customer Success Stories",
-      },
-      {
-        to: "/",
-        text: "Community hub",
-      },
-      {
-        to: "/",
-        text: "Forum",
-      },
-      {
-        to: "/",
-        text: "Events",
-      },
-      {
-        to: "/",
-        text: "Blog",
-      },
-      {
-        to: "/",
-        text: "Influencers",
-      },
-      {
-        to: "/",
-        text: "Affiliates",
-      },
-      {
-        to: "/",
-        text: "Podcast",
-      },
-      {
-        to: "/",
-        text: "Invite a Friend",
-      },
-      {
-        to: "/",
-        text: "Become a Seller",
-      },
-      {
-        to: "/",
-        text: "Community Standards",
-      },
-    ],
-  },
-  {
-    id: "more",
-    title: "More From Fiverr",
-    links: [
-      {
-        to: "/",
-        text: "Fiverr Business",
-      },
-      {
-        to: "/",
-        text: "Fiverr Pro",
-      },
-      {
-        to: "/",
-        text: "Fiverr Logo Maker",
-      },
-      {
-        to: "/",
-        text: "Fiverr Guides",
-      },
-      {
-        to: "/",
-        text: "Get Inspired",
-      },
-      {
-        to: "/",
-        text: "Fiverr Select",
-      },
-      {
-        to: "/",
-        text: "ClearVoice",
-      },
-      {
-        to: "/",
-        text: "Fiverr Workspace",
-      },
-      {
-        to: "/",
-        text: "Learn",
-      },
-      {
-        to: "/",
-        text: "Working Not Working",
-      },
-    ],
-  },
+  // {
+  //   id: "cat",
+  //   title: "Categories",
+  //   links: [
+  //     {
+  //       to: "/",
+  //       text: "Graphics & Design",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Digital Marketing",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Writing & Translation",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Video & Animation",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Music & Audio",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Programming & Tech",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Data",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Business",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Lifestyle",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Photography",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Sitemap",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: "abt",
+  //   title: "About",
+  //   links: [
+  //     {
+  //       to: "/",
+  //       text: "Careers",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Press & News",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Partnerships",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Privacy Policy",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Terms of Service",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Intellectual Property Claims",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Investor Relations",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: "sup",
+  //   title: "Support",
+  //   links: [
+  //     {
+  //       to: "/",
+  //       text: "Help & Support",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Trust & Safety",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Selling on Fiverr",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Buying on Fiverr",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: "com",
+  //   title: "Community",
+  //   links: [
+  //     {
+  //       to: "/",
+  //       text: "Customer Success Stories",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Community hub",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Forum",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Events",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Blog",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Influencers",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Affiliates",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Podcast",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Invite a Friend",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Become a Seller",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Community Standards",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: "more",
+  //   title: "More From Fiverr",
+  //   links: [
+  //     {
+  //       to: "/",
+  //       text: "Fiverr Business",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Fiverr Pro",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Fiverr Logo Maker",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Fiverr Guides",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Get Inspired",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Fiverr Select",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "ClearVoice",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Fiverr Workspace",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Learn",
+  //     },
+  //     {
+  //       to: "/",
+  //       text: "Working Not Working",
+  //     },
+  //   ],
+  // },
 ];
 
 export const tableData = [

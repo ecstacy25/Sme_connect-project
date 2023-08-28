@@ -16,5 +16,5 @@ build/
 
 
 # Ignore config files
-.configs/
+config/
 

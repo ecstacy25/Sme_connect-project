@@ -18,7 +18,7 @@ mongoose.set("strictQuery", true);
 const connectMongodb = async () => {
   try {
     await mongoose.connect(
-      "mongodb+srv://aruaecstacy:beloved.25@cluster1.aptjs0n.mongodb.net/aruaecstacy",
+      "mongodb+srv://sundayarua10:smeconnect@smeconnect.opwfzyx.mongodb.net/sundayarua10",
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -32,7 +32,7 @@ const connectMongodb = async () => {
 
 const corsOptions = {
   origin: [
-    "http://localhost:",
+    "http://localhost:8080",
     "http://localhost:4173",
     "https://fiverr-clone-zuhed.netlify.app",
   ],

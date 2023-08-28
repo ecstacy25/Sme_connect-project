@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useMemo } from "react";
 import { BsCheckCircle, BsPlayFill } from "react-icons/bs";
-import userImg from "../../../assets/images/users.png";
+import userImg from "../../../assets/images/users.jpg";
 import { featureData } from "../../../data/data";
 
 const Features = () => {
@@ -45,7 +45,7 @@ const Features = () => {
         <div className="flex lg:items-center flex-col items-start justify-start lg:flex-row lg:justify-between w-full gap-8 lg:gap-5">
           <div className="flex-1 flex items-start justify-start flex-col gap-5">
             <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold text-darkColor">
-              A whole world of freelance <br /> talent at your fingertips
+            A realm of specialized expertise <br /> tailored for SMEs like yours
             </h2>
             <div className="w-full flex items-start justify-start flex-col gap-5">
               {featureData.map((item, i) => (
@@ -83,11 +83,11 @@ const Features = () => {
                   ref={videoRef}
                   className="lg:w-[986px] lg:h-[551px] h-[250px] rounded-2xl w-[90%] flex items-center justify-center"
                 >
-                  <video
+                  {/* <video
                     className="rounded-md h-full w-full"
                     src="https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/vmvv3czyk2ifedefkau7"
                     controls
-                  ></video>
+                  ></video> */}
                 </div>
               </div>
             )}
