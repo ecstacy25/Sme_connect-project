@@ -678,16 +678,16 @@ export const messageColumns = [
 
 export const buttons = [
   {
-    text: "Web Design",
+    text: "Barbing",
   },
   {
-    text: "WordPress",
+    text: "Groceries",
   },
   {
-    text: "Logo Design",
+    text: "Farm products",
   },
   {
-    text: "Ai Services",
+    text: "Fashion Designing",
   },
 ];
 

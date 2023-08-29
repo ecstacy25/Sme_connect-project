@@ -60,15 +60,15 @@ const Navbar = () => {
   };
 
   const links = [
-    "Graphics & Design",
-    "Digital Marketing",
-    "Writing & Translation",
-    "Video & Animation",
-    "Music & Audio",
+    "Fashion Designing",
+    "Barbing",
+    "Graphic Designing",
+    "Laundry Services",
+    "Plumbing Services",
     "Programming & Tech",
-    "Business",
-    "Lifestyle",
-    "AI Services",
+    "Carpentry Services",
+    "Groceries",
+    "Farm products",
   ];
 
   const slideRight = () => {
@@ -113,21 +113,21 @@ const Navbar = () => {
             <Link to="/" className="cursor-pointer hidden lg:flex">
               SME Connect Business
             </Link>
-            <div className="cursor-pointer hidden lg:flex">Explore</div>
+            <div className="cursor-pointer hidden lg:flex">About us</div>
             <div className="items-center gap-2 cursor-pointer hidden lg:flex">
               <span>
-                <TfiWorld />
+                {/* <TfiWorld /> */}
               </span>
-              English
+              Contact us
             </div>
             <span className="hidden lg:flex items-center gap-2 cursor-pointer">
               <span>
-                <BsCurrencyDollar />
+                {/* <BsCurrencyDollar /> */}
               </span>
-              NGN
+              {/* NGN */}
             </span>
             {!authUser?.isSeller && (
-              <p className="cursor-pointer hidden lg:flex">Become a Seller</p>
+              <p className="cursor-pointer hidden lg:flex"></p>
             )}
             {authUser ? (
               <>

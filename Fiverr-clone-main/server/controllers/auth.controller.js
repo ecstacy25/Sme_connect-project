@@ -22,6 +22,7 @@ export const login = async (req, res, next) => {
   try {
     const user = await User.findOne({ username: req.body.username });
     if (!user) return next(createError(404, "User not found!"));
+
     const isCorrectPassword = bcrypt.compareSync(
       req.body.password,
       user.password
@@ -37,28 +38,29 @@ export const login = async (req, res, next) => {
       process.env.JWT_KEY
     );
 
+    // Exclude password from response
     const { password, ...info } = user._doc;
-   const loginResponse = res
-   
-      .cookie("accessToken", token, {
-        httpOnly: true,
-        sameSite: "none",
-        secure: true,
-      })
-      .status(200)
-      .send(info);
-      console.log(loginResponse, 'login');
+
+    // Set the access token as an HttpOnly cookie
+    res.cookie("accessToken", token, {
+      httpOnly: true,
+      sameSite: "none",
+      secure: true,
+    });
+
+    // Send user info without password
+    res.status(200).send(info);
   } catch (error) {
     next(error);
   }
 };
 
 export const logout = async (req, res) => {
-  res
-    .clearCookie("accessToken", {
-      sameSite: "none",
-      secure: true,
-    })
-    .status(200)
-    .send("Logged out successfully.");
+  // Clear the access token cookie
+  res.clearCookie("accessToken", {
+    sameSite: "none",
+    secure: true,
+  });
+
+  res.status(200).send("Logged out successfully.");
 };

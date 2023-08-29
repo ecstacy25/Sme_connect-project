@@ -54,9 +54,9 @@ const MobileSidebar = ({ show, setShow, setLoginModal }) => {
           show ? "left-0" : "-left-[100vw]"
         }`}
       >
-        <div className="sticky top-0 z-2 bg-white w-full flex flex-col gap-6 items-start justify-start">
+        <div className='sticky top-0 z-2 bg-white w-full flex flex-col gap-6 items-start justify-start'>
           <NavLink
-            to="/join"
+            to='/join'
             className={`border py-3 px-6 rounded bg-primary border-primary text-white transition-all duration-300 text-base font-semibold`}
           >
             Join SME Connect
@@ -67,31 +67,31 @@ const MobileSidebar = ({ show, setShow, setLoginModal }) => {
               setShow(false);
               setLoginModal(true);
             }}
-            className="cursor-pointer text-gray-400 text-base font-medium"
+            className='cursor-pointer text-gray-400 text-base font-medium'
           >
             Sign in
           </div>
         </div>
-        <p className="cursor-pointer text-gray-400 text-base font-medium">
+        <p className='cursor-pointer text-gray-400 text-base font-medium'>
           Browser Categories
         </p>
-        <p className="cursor-pointer text-gray-400 text-base font-medium">
-          Explore
+        <p className='cursor-pointer text-gray-400 text-base font-medium'>
+          About us
         </p>
-        <NavLink to="/" className={`text-base font-semibold text-gray-400`}>
+        <NavLink to='/' className={`text-base font-semibold text-gray-400`}>
           SME Connect Business
         </NavLink>
-        <div className="mt-5 border-t w-full flex items-start justify-start flex-col gap-4 pt-3">
-          <p className="cursor-pointer text-gray-400 text-base font-medium">
+        <div className='mt-5 border-t w-full flex items-start justify-start flex-col gap-4 pt-3'>
+          <p className='cursor-pointer text-gray-400 text-base font-medium'>
             Home
           </p>
-          <p className="cursor-pointer text-gray-400 text-base font-medium flex items-center justify-start gap-2">
-            English
+          <p className='cursor-pointer text-gray-400 text-base font-medium flex items-center justify-start gap-2'>
+            Contact us
             <span>
               <TfiWorld />
             </span>
           </p>
-          <p className="cursor-pointer text-gray-400 text-base font-medium flex items-center justify-start gap-2">
+          <p className='cursor-pointer text-gray-400 text-base font-medium flex items-center justify-start gap-2'>
             <span>
               <BsCurrencyDollar />
             </span>

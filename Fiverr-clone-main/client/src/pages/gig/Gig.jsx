@@ -9,11 +9,14 @@ import requests from "../../libs/request";
 
 const Gig = () => {
   const { id } = useParams();
+
+  // Fetch gig data using react-query
   const { isLoading, error, data } = useQuery({
     queryKey: ["gig"],
     queryFn: () =>
       Axios.get(`${requests.gigs}/single/${id}`).then((res) => res.data),
   });
+
   const userId = data?.userId;
 
   return (
@@ -25,14 +28,16 @@ const Gig = () => {
           </div>
         ) : error ? (
           <p className="text-2xl text-red-400 font-normal">
-            Error : Something went wrong
+            Error: Something went wrong
           </p>
         ) : (
           <div className="w-full flex items-start justify-between gap-6 flex-col lg:flex-row">
             <div className="w-full lg:w-[70%]">
+              {/* Display gig details */}
               <GigsDetails data={data} id={id} userId={userId} />
             </div>
             <div className="w-full lg:w-[30%] sticky top-40">
+              {/* Display order section */}
               <GigsOrder data={data} id={id} />
             </div>
           </div>
