@@ -34,7 +34,6 @@ const corsOptions = {
   origin: [
     "http://localhost:8080",
     "http://localhost:4173",
-    "https://fiverr-clone-zuhed.netlify.app",
   ],
   credentials: true,
 };
