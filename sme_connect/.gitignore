@@ -18,3 +18,6 @@ build/
 # Ignore config files
 config/
 
+#Ignore env files
+.env/
+
