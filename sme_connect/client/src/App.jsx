@@ -14,25 +14,30 @@ import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
 import Success from "./pages/success/Success";
 import Pay from "./pages/pay/Pay";
+import AboutUs from "./pages/AboutUs/AboutUs";
+import Contact from "./pages/Contact/Contact";
 
 const App = () => {
   return (
     <div>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/signin" element={<Login />} />
-        <Route path="/join" element={<Register />} />
-        <Route path="/gigs" element={<Gigs />} />
-        <Route path="/gigs/:id" element={<Gig />} />
-        <Route path="/orders" element={<Orders />} />
-        <Route path="/myGigs" element={<MyGigs />} />
-        <Route path="/add" element={<Add />} />
-        <Route path="/messages" element={<Messages />} />
-        <Route path="/messages/:id" element={<Message />} />
-        <Route path="/pay/:id" element={<Pay />} />
-        <Route path="/success" element={<Success />} />
+        <Route path='/' element={<Homepage />} />
+        <Route path='/signin' element={<Login />} />
+        <Route path='/About us' element={<AboutUs />} />
+        <Route path='/Contact us' element={<Contact />} />
+        <Route path='/join' element={<Register />} />
+        <Route path='/gigs' element={<Gigs />} />
+        <Route path='/gigs/:id' element={<Gig />} />
+        <Route path='/orders' element={<Orders />} />
+        <Route path='/myGigs' element={<MyGigs />} />
+        <Route path='/add' element={<Add />} />
+        <Route path='/messages' element={<Messages />} />
+        <Route path='/messages/:id' element={<Message />} />
+        <Route path='/pay/:id' element={<Pay />} />
+        <Route path='/success' element={<Success />} />
       </Routes>
+
       <Footer />
     </div>
   );

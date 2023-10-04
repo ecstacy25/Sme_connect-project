@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { TfiWorld } from "react-icons/tfi";
-import { BsCurrencyDollar } from "react-icons/bs";
+// import { BsCurrencyNaira } from "react-icons/bs";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import Login from "../../pages/login/Login";
 import useAuthStore from "../../stores";
@@ -83,63 +83,70 @@ const Navbar = () => {
     }
   };
 
-
   return (
     <header
       className={`flex items-center justify-center w-full flex-col text-blue-700 fixed top-0 transition-all ease-in-out z-20 ${
         active || pathname !== "/" ? "bg-white !text-darkColor" : ""
       }`}
     >
-      <div className="contain">
-        <div className="w-full flex items-center justify-between py-4 relative">
+      <div className='contain'>
+        <div className='w-full flex items-center justify-between py-4 relative'>
           <MobileSidebar
             show={showLink}
             setShow={setShowLink}
             setLoginModal={setLoginModal}
           />
-          <div className="flex items-center gap-2 h-full justify-between w-[50%] sm:w-fit">
-            <span onClick={() => setShowLink(true)} className="lg:hidden mt-1">
+          <div className='flex items-center gap-2 h-full justify-between w-[50%] sm:w-fit'>
+            <span onClick={() => setShowLink(true)} className='lg:hidden mt-1' >
               <FaBars size={25} />
             </span>
             <Link
-              to="/"
-              className="text-4xl select-none font-black tracking-tighter"
+              to='/'
+              className='text-4xl select-none font-green tracking-tighter'
             >
-              <i><span>SME</span></i>
-              <i><span className="text-primary">Connect</span></i>
+              <i>
+                <span>SME</span>
+              </i>
+              <i>
+                <span className='text-primary'>Connect</span>
+              </i>
             </Link>
           </div>
-          <nav className="flex items-center justify-end gap-7 font-medium text-base">
-            <Link to="/" className="cursor-pointer hidden lg:flex">
+          <nav className='flex items-center justify-end gap-7 font-medium text-base'>
+            <Link to='/' className='cursor-pointer hidden lg:flex'>
               SME Connect Business
             </Link>
-            <div className="cursor-pointer hidden lg:flex">About us</div>
-            <div className="items-center gap-2 cursor-pointer hidden lg:flex">
+            <Link to='/About us' className='cursor-pointer hidden lg:flex'>
+              About us
+            </Link>
+            <Link to='/Contact us' className='cursor-pointer hidden lg:flex'>
+              Contact us
+            </Link>
+            {/* <div className="cursor-pointer hidden lg:flex">About us</div> */}
+            {/* <div className="items-center gap-2 cursor-pointer hidden lg:flex">
               <span>
-                {/* <TfiWorld /> */}
+                <TfiWorld />
               </span>
               Contact us
-            </div>
-            <span className="hidden lg:flex items-center gap-2 cursor-pointer">
-              <span>
-                {/* <BsCurrencyDollar /> */}
-              </span>
+            </div> */}
+            <span className='hidden lg:flex items-center gap-2 cursor-pointer'>
+              <span>{/* <BsCurrencyNaira /> */}</span>
               {/* NGN */}
             </span>
             {!authUser?.isSeller && (
-              <p className="cursor-pointer hidden lg:flex"></p>
+              <p className='cursor-pointer hidden lg:flex'></p>
             )}
             {authUser ? (
               <>
                 {authUser && (
                   <div
-                    className="relative flex flex-col sm:flex-row items-center sm:gap-4 cursor-pointer"
+                    className='relative flex flex-col sm:flex-row items-center sm:gap-4 cursor-pointer'
                     onClick={() => setOpenDrop((prev) => !prev)}
                   >
                     <img
                       src={authUser.img || Avatar}
-                      alt="user_image"
-                      className="w-[32px] h-[32px] rounded-[50%] object-cover"
+                      alt='user_image'
+                      className='w-[32px] h-[32px] rounded-[50%] object-cover'
                     />
                     <span>{authUser?.username}</span>
                     <div
@@ -151,34 +158,35 @@ const Navbar = () => {
                       {authUser?.isSeller && (
                         <>
                           <NavLink
-                            to="/myGigs"
-                            className="cursor-pointer w-full text-sm text-darkColor"
+                            to='/myGigs'
+                            className='cursor-pointer w-full text-sm text-darkColor'
                           >
                             Products
                           </NavLink>
                           <NavLink
-                            to="/add"
-                            className="cursor-pointer w-full text-sm text-darkColor"
+                            to='/add'
+                            className='cursor-pointer w-full text-sm text-darkColor'
                           >
                             Add New Product
                           </NavLink>
                         </>
                       )}
                       <NavLink
-                        to="/orders"
-                        className="cursor-pointer w-full text-sm text-darkColor"
+                        to='/orders'
+                        className='cursor-pointer w-full text-sm text-darkColor'
                       >
                         Orders
                       </NavLink>
                       <NavLink
-                        to="/messages"
-                        className="cursor-pointer w-full text-sm text-darkColor"
+                        to='/messages'
+                        className='cursor-pointer w-full text-sm text-darkColor'
                       >
                         Messages
+                        
                       </NavLink>
                       <div
                         onClick={handleLogout}
-                        className="cursor-pointer w-full text-sm text-darkColor"
+                        className='cursor-pointer w-full text-sm text-darkColor'
                       >
                         Logout
                       </div>
@@ -200,7 +208,7 @@ const Navbar = () => {
                   SIGN IN
                 </div>
                 <NavLink
-                  to="/join"
+                  to='/join'
                   className={` border-cyan-700 border py-2 px-5 rounded hover:bg-primary hover:border-primary hover:text-white transition-all duration-300 text-sm font-semibold ${
                     active ? "text-primary border-primary" : ""
                   }`}
@@ -217,8 +225,8 @@ const Navbar = () => {
           active || pathname !== "/" ? "flex" : "hidden"
         }`}
       >
-        <hr className="border-black" />
-        <div className="contain relative">
+        <hr className='border-black' />
+        <div className='contain relative'>
           <div
             id={"navSlider"}
             className={`w-full inline-block h-full whitespace-nowrap scroll-smooth lg:flex items-center lg:justify-between py-3 overflow-x-auto gap-5 font-medium scrollbar-hide text-sm relative ${
@@ -228,7 +236,7 @@ const Navbar = () => {
             {links.map((item, i) => (
               <span
                 key={i}
-                className="hover:border-b-2 cursor-pointer transition-[border] h-8 scrollbar-hide border-primary mx-4 first:ml-0 lg:mx-0"
+                className='hover:border-b-2 cursor-pointer transition-[border] h-8 scrollbar-hide border-primary mx-4 first:ml-0 lg:mx-0'
               >
                 {item}
               </span>
@@ -236,7 +244,7 @@ const Navbar = () => {
           </div>
           <span
             onClick={slideRight}
-            className="absolute z-10 top-3 -right-8 cursor-pointer laptop:hidden"
+            className='absolute z-10 top-3 -right-8 cursor-pointer laptop:hidden'
           >
             <FiChevronRight size={20} />
           </span>
