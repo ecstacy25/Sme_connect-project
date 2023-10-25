@@ -161,13 +161,13 @@ const Navbar = () => {
                             to='/myGigs'
                             className='cursor-pointer w-full text-sm text-darkColor'
                           >
-                            Products
+                            Services
                           </NavLink>
                           <NavLink
                             to='/add'
                             className='cursor-pointer w-full text-sm text-darkColor'
                           >
-                            Add New Product
+                            Add New service
                           </NavLink>
                         </>
                       )}

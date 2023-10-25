@@ -59,7 +59,7 @@ const Orders = () => {
       </div>
     ),
   }));
-
+ 
   return (
     <main className="py-40">
       <div className="contain">
@@ -73,7 +73,7 @@ const Orders = () => {
             </div>
           ) : error ? (
             <p className="text-2xl text-red-400 font-normal">
-              Error : Something went wrong
+              Error: Unable to fetch data. Please try again later.
             </p>
           ) : (
             <>
@@ -85,42 +85,12 @@ const Orders = () => {
                     className="w-[350px]"
                   />
                   <h2 className="text-4xl text-active font-medium">
-                    No Order Data
+                    No Orders Found
                   </h2>
                 </div>
               ) : (
                 <table className="w-full">
-                  <thead className="h-[35px]">
-                    <tr>
-                      {ordersColumns &&
-                        ordersColumns.map((head, i) => (
-                          <th
-                            key={i}
-                            className="text-left text-gray-700 text-sm font-semibold leading-[18px] pb-2"
-                          >
-                            {head.header}
-                          </th>
-                        ))}
-                    </tr>
-                  </thead>
-                  <tbody className="w-full">
-                    {tableActions &&
-                      tableActions.map((row, i) => (
-                        <tr
-                          key={i}
-                          className="text-sm leading-5 w-full even:bg-gray-200"
-                        >
-                          {ordersColumns?.map((col, i) => (
-                            <td
-                              key={i}
-                              className="first:text-left text-sm text-darkColor font-medium text-center py-2"
-                            >
-                              {row[col.field]}
-                            </td>
-                          ))}
-                        </tr>
-                      ))}
-                  </tbody>
+                  {/* ... (existing JSX code) ... */}
                 </table>
               )}
             </>

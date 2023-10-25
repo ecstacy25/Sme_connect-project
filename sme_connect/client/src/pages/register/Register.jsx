@@ -15,6 +15,8 @@ const Register = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const initialValues = {
+    firstname: "",
+    lastname: "",
     username: "",
     email: "",
     password: "",
@@ -24,12 +26,13 @@ const Register = () => {
     isSeller: false,
     desc: "",
   };
-  const onSubmit = async (payload, actions) => {
+
+  const onSubmit = async (values, actions) => {
     setLoading(true);
     const url = await upload(values.img);
     try {
       const res = await Axios.post(requests.register, {
-        ...payload,
+        ...values,
         img: url,
       });
       toast.success(res?.data, {
@@ -88,74 +91,106 @@ const Register = () => {
   }
 
   return (
-    <div className="py-24 lg:py-40 pb-10 " >
-      <div className="contain">
-        <div className="w-full lg:w-[75%] flex items-center flex-col sm:flex-row justify-center py-10 mx-auto">
+    <div className='py-24 lg:py-40 pb-10 '>
+      <div className='contain'>
+        <div className='w-full lg:w-[75%] flex items-center flex-col sm:flex-row justify-center py-10 mx-auto'>
           <form
             onSubmit={handleSubmit}
-            className="flex items-start flex-col sm:flex-row justify-start gap-8 w-full"
+            className='flex items-start flex-col sm:flex-row justify-start gap-8 w-full'
           >
-            <div className="flex items-start justify-start flex-col gap-4 w-full sm:flex-1">
-              <h1 className="text-2xl text-darkColor font-semibold">
+            <div className='flex items-start justify-start flex-col gap-4 w-full sm:flex-1'>
+              <h1 className='text-2xl text-darkColor font-semibold'>
                 Create a User Account
               </h1>
+
               <CustomizeInput
                 showLabel={false}
-                htmlFor="username"
-                label="Username"
-                labelClassName="text-sm font-medium text-darkColor"
-                type="text"
-                name="username"
+                htmlFor='firstname'
+                label='Firstname'
+                labelClassName='text-sm font-medium text-darkColor'
+                type='text'
+                name='firstname'
+                value={values.firstname}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                error={getError("firstname")}
+                id='firstname'
+                placeholder='Johndoe'
+                className='bg-white  border border-[#C7CBD1] w-full h-[40px] rounded px-4 focus:border-[1.5px] focus:border-primary outline-none text-sm'
+              />
+              <CustomizeInput
+                showLabel={false}
+                htmlFor='lastname'
+                label='Lastname'
+                labelClassName='text-sm font-medium text-darkColor'
+                type='text'
+                name='lastname'
+                value={values.lastname}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                error={getError("lastname")}
+                id='lastname'
+                placeholder='Johndoe'
+                className='bg-white  border border-[#C7CBD1] w-full h-[40px] rounded px-4 focus:border-[1.5px] focus:border-primary outline-none text-sm'
+              />
+
+              <CustomizeInput
+                showLabel={false}
+                htmlFor='username'
+                label='Username'
+                labelClassName='text-sm font-medium text-darkColor'
+                type='text'
+                name='username'
                 value={values.username}
                 onChange={handleChange}
                 onBlur={handleBlur}
                 error={getError("username")}
-                id="username"
-                placeholder="Johndoe"
-                className="bg-white  border border-[#C7CBD1] w-full h-[40px] rounded px-4 focus:border-[1.5px] focus:border-primary outline-none text-sm"
+                id='username'
+                placeholder='Johndoe'
+                className='bg-white  border border-[#C7CBD1] w-full h-[40px] rounded px-4 focus:border-[1.5px] focus:border-primary outline-none text-sm'
               />
               <CustomizeInput
                 showLabel={false}
-                htmlFor="email"
-                label="Email Address"
-                labelClassName="text-sm font-medium text-darkColor"
-                type="text"
-                name="email"
+                htmlFor='email'
+                label='Email Address'
+                labelClassName='text-sm font-medium text-darkColor'
+                type='text'
+                name='email'
                 value={values.email}
                 onChange={handleChange}
                 onBlur={handleBlur}
                 error={getError("email")}
-                id="email"
-                placeholder="Email Address"
-                className="bg-white  border border-[#C7CBD1] w-full h-[40px] rounded px-4 focus:border-[1.5px] focus:border-primary outline-none text-sm"
+                id='email'
+                placeholder='Email Address'
+                className='bg-white  border border-[#C7CBD1] w-full h-[40px] rounded px-4 focus:border-[1.5px] focus:border-primary outline-none text-sm'
               />
               <CustomizeInput
                 showLabel={false}
-                htmlFor="password"
-                label="Password"
-                labelClassName="text-sm font-medium text-darkColor"
-                type="password"
-                name="password"
+                htmlFor='password'
+                label='Password'
+                labelClassName='text-sm font-medium text-darkColor'
+                type='password'
+                name='password'
                 value={values.password}
                 onChange={handleChange}
                 onBlur={handleBlur}
                 error={getError("password")}
-                id="password"
-                placeholder="********"
-                className="bg-white  border border-[#C7CBD1] w-full h-[40px] rounded px-4 focus:border-[1.5px] focus:border-primary outline-none text-sm"
+                id='password'
+                placeholder='********'
+                className='bg-white  border border-[#C7CBD1] w-full h-[40px] rounded px-4 focus:border-[1.5px] focus:border-primary outline-none text-sm'
               />
-              <div className="w-full">
+              <div className='w-full'>
                 <CustomizeInput
                   showLabel={false}
-                  htmlFor="img"
-                  label="Profile Picture"
-                  labelClassName="text-sm font-medium text-darkColor"
-                  type="file"
-                  name="img"
-                  accept="image/*"
+                  htmlFor='img'
+                  label='Profile Picture'
+                  labelClassName='text-sm font-medium text-darkColor'
+                  type='file'
+                  name='img'
+                  accept='image/*'
                   onChange={handleImageChange}
-                  id="img"
-                  className="hidden"
+                  id='img'
+                  className='hidden'
                 />
                 <div
                   className={`flex justify-center items-center flex-col gap-3 w-full border h-[136px] rounded-md text-sm text-gray-600 ${
@@ -166,13 +201,13 @@ const Register = () => {
                 >
                   {values?.img?.type?.startsWith("image/") ? (
                     <label
-                      htmlFor="img"
-                      className="cursor-pointer h-full w-full flex items-center justify-center"
+                      htmlFor='img'
+                      className='cursor-pointer h-full w-full flex items-center justify-center'
                     >
                       <img
                         src={URL.createObjectURL(values.img)}
                         alt={values.img.name}
-                        className="w-[120px] h-[120px] rounded-full object-cover"
+                        className='w-[120px] h-[120px] rounded-full object-cover'
                       />
                     </label>
                   ) : (
@@ -180,8 +215,8 @@ const Register = () => {
                       <p>Upload Cover Image</p>
                       <BsUpload size={50} />
                       <label
-                        htmlFor="img"
-                        className="w-fit border py-2 px-5 rounded-md cursor-pointer"
+                        htmlFor='img'
+                        className='w-fit border py-2 px-5 rounded-md cursor-pointer'
                       >
                         Browser
                       </label>
@@ -191,50 +226,50 @@ const Register = () => {
               </div>
               <CustomizeInput
                 showLabel={false}
-                htmlFor="country"
-                label="country"
-                labelClassName="text-sm font-medium text-darkColor"
-                type="text"
-                name="country"
+                htmlFor='country'
+                label='country'
+                labelClassName='text-sm font-medium text-darkColor'
+                type='text'
+                name='country'
                 value={values.country}
                 onChange={handleChange}
                 onBlur={handleBlur}
                 error={getError("country")}
-                id="country"
-                placeholder="e.g Nigeria"
-                className="bg-white  border border-[#C7CBD1] w-full h-[40px] rounded px-4 focus:border-[1.5px] focus:border-primary outline-none text-sm"
+                id='country'
+                placeholder='e.g Nigeria'
+                className='bg-white  border border-[#C7CBD1] w-full h-[40px] rounded px-4 focus:border-[1.5px] focus:border-primary outline-none text-sm'
               />
               <button
-                type="submit"
-                className="w-full bg-primary/80 hover:bg-primary cursor-pointer outline-none text-white rounded py-3 transition-all duration-300 mt-4 hidden sm:block"
+                type='submit'
+                className='w-full bg-primary/80 hover:bg-primary cursor-pointer outline-none text-white rounded py-3 transition-all duration-300 mt-4 hidden sm:block'
               >
                 {loading ? (
-                  <div className="flex items-center justify-center">
-                    <img src={loader} alt="/" className="w-[40px]" />
+                  <div className='flex items-center justify-center'>
+                    <img src={loader} alt='/' className='w-[40px]' />
                   </div>
                 ) : (
-                  <p className="flex items-center justify-center gap-2">
+                  <p className='flex items-center justify-center gap-2'>
                     Register
                   </p>
                 )}
               </button>
             </div>
-            <div className="flex items-start justify-start flex-col gap-4 w-full sm:flex-1">
-              <h1 className="text-2xl text-darkColor font-semibold">
+            <div className='flex items-start justify-start flex-col gap-4 w-full sm:flex-1'>
+              <h1 className='text-2xl text-darkColor font-semibold'>
                 Want to be a Service Provider?
               </h1>
-              <div className="w-full mt-8">
-                <label className="flex items-center justify-start w-full relative gap-4">
-                  <span className="text-[#5D6771] text-[15px] leading-5 font-medium flex items-center justify-center select-none">
+              <div className='w-full mt-8'>
+                <label className='flex items-center justify-start w-full relative gap-4'>
+                  <span className='text-[#5D6771] text-[15px] leading-5 font-medium flex items-center justify-center select-none'>
                     Activate the Professional account
                   </span>
-                  <span className="flex items-center justify-center select-none action">
+                  <span className='flex items-center justify-center select-none action'>
                     <input
-                      type="checkbox"
-                      className="appearance-none"
+                      type='checkbox'
+                      className='appearance-none'
                       value={values.isSeller}
                       onChange={handleChange}
-                      name="isSeller"
+                      name='isSeller'
                     />
                     <i className="bg-[#c5c7c9] relative w-11 h-6 rounded-xl transition-all duration-200 before:content-[''] before:absolute before:top-[2px] before:left-[2.8px] before:w-5 before:h-5 before:bg-white before:rounded-full before:shadow-newLongShadow before:transition-all before:duration-300 cursor-pointer"></i>
                   </span>
@@ -242,44 +277,44 @@ const Register = () => {
               </div>
               <CustomizeInput
                 showLabel={false}
-                containerClass="my-2"
-                htmlFor="phone"
-                label="Phone Number"
-                labelClassName="text-sm font-medium text-darkColor"
-                type="text"
-                name="phone"
+                containerClass='my-2'
+                htmlFor='phone'
+                label='Phone Number'
+                labelClassName='text-sm font-medium text-darkColor'
+                type='text'
+                name='phone'
                 value={values.phone}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                id="phone"
-                placeholder="phone"
-                className="bg-white  border border-[#C7CBD1] w-full h-[40px] rounded px-4 focus:border-[1.5px] focus:border-primary outline-none text-sm"
+                id='phone'
+                placeholder='phone'
+                className='bg-white  border border-[#C7CBD1] w-full h-[40px] rounded px-4 focus:border-[1.5px] focus:border-primary outline-none text-sm'
               />
               <CustomizeTextArea
                 rows={9}
                 showLabel={false}
-                htmlFor="desc"
-                label="Bio"
-                labelClassName="text-sm font-medium text-darkColor"
+                htmlFor='desc'
+                label='Bio'
+                labelClassName='text-sm font-medium text-darkColor'
                 value={values.desc}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                id="desc"
-                name="desc"
-                placeholder="A short description of yourself"
-                className="bg-white border border-[#E6E6E6] w-full h-[107px] rounded p-4 focus:border-[1.5px] outline-none text-sm text-[#454B54] resize-none shadow-smallShadow"
+                id='desc'
+                name='desc'
+                placeholder='A short description of yourself'
+                className='bg-white border border-[#E6E6E6] w-full h-[107px] rounded p-4 focus:border-[1.5px] outline-none text-sm text-[#454B54] resize-none shadow-smallShadow'
               />
             </div>
             <button
-              type="submit"
-              className="w-full bg-primary/80 hover:bg-primary cursor-pointer outline-none text-white rounded py-3 transition-all duration-300 mt-4 sm:hidden"
+              type='submit'
+              className='w-full bg-primary/80 hover:bg-primary cursor-pointer outline-none text-white rounded py-3 transition-all duration-300 mt-4 sm:hidden'
             >
               {loading ? (
-                <div className="flex items-center justify-center">
-                  <img src={loader} alt="/" className="w-[40px]" />
+                <div className='flex items-center justify-center'>
+                  <img src={loader} alt='/' className='w-[40px]' />
                 </div>
               ) : (
-                <p className="flex items-center justify-center gap-2">
+                <p className='flex items-center justify-center gap-2'>
                   Register
                 </p>
               )}

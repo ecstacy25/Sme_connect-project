@@ -9,6 +9,8 @@ export const loginSchema = yup.object({
 });
 
 export const registerSchema = yup.object({
+  firstname: yup.string().required("Required"),
+  lastname: yup.string().required("Required"),
   username: yup.string().required("Required"),
   email: yup.string().email("Invalid Email").required("Required"),
   img: yup.string().required("Required"),

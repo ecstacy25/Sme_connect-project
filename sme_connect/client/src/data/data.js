@@ -21,6 +21,13 @@ import marketIcon9 from "../assets/icons/market9.svg";
 import marketIcon10 from "../assets/icons/market10.svg";
 
 export const cards = [
+
+  {
+    id: "001",
+    title: "AI Artists",
+    description: "Add talent to AI",
+    img: image,
+  },
   {
     id: "001",
     title: "AI Artists",
@@ -86,6 +93,13 @@ export const cards = [
     title: "Book Covers",
     description: "Showcase your story",
     img: image10,
+  },
+
+  {
+    id: "0012",
+    title: "Barbing",
+    description: "Unisex barbing saloon",
+    img: image,
   },
 ];
 

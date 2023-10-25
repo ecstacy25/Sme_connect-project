@@ -74,10 +74,10 @@ const MyGigs = () => {
       <div className="contain">
         <div className="w-full flex flex-col items-start gap-5 justify-start">
           <div className="flex items-center justify-between w-full gap-2">
-            <h2 className="text-2xl font-bold">gigs</h2>
+            <h2 className="text-2xl font-bold">Services</h2>
             <Link to="/add">
               <button className="bg-primary/80 py-3 px-2 text-white outline-none rounded-md text-sm hover:bg-primary w-fit transition-all duration-300">
-                Add New gigs
+                Add New Service
               </button>
             </Link>
           </div>
