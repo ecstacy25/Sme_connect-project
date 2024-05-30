@@ -18,7 +18,7 @@ mongoose.set("strictQuery", true);
 const connectMongodb = async () => {
   try {
     await mongoose.connect(
-      "mongodb+srv://sundayarua10:smeconnect@smeconnect.opwfzyx.mongodb.net/sundayarua10",
+      "mongodb+srv://AlxFinalProject:alxproject@alxfinalproject.nnk1ehi.mongodb.net",
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
