@@ -42,11 +42,11 @@ class Contact extends Component {
                     <AiOutlineMail className="icon icon_email text-white w-10 h-20" />
                     <a
                       className="texta text-white text-lg"
-                      href="mailto:emmanuel.alao@gmail.com"
+                      href="mailto:ibiamjnr9@gmail.com"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      emmanuel.alao@gmail.com
+                      ibiamjnr9@gmail.com
                     </a>
                   </div>
                 </section>
@@ -60,7 +60,7 @@ class Contact extends Component {
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      +2347033348441
+                      +2347066026820
                     </a>
                   </div>
                 </section>
